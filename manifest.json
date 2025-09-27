@@ -1,0 +1,91 @@
+{
+  "name": "Farmacia Vivo Más - Tu Salud es Nuestra Prioridad",
+  "short_name": "Vivo Más",
+  "description": "La farmacia líder en Chile con descuentos de hasta 82%. Medicamentos de calidad, atención farmacéutica profesional 24/7 y entrega en 30 minutos.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#066f93",
+  "background_color": "#ffffff",
+  "lang": "es-CL",
+  "scope": "/",
+  "categories": ["health", "medical", "shopping"],
+  "icons": [
+    {
+      "src": "/Logo-Vivo-Mas-Icono.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/Logo-Vivo-Mas-Icono.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo-vivomas-transparente.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/sucursal_castellon.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "platform": "wide",
+      "label": "Farmacia Vivo Más - Sucursal Castellón"
+    },
+    {
+      "src": "/sucursal_ohiggins.jpg", 
+      "sizes": "390x844",
+      "type": "image/jpeg",
+      "platform": "narrow",
+      "label": "Farmacia Vivo Más - Sucursal O'Higgins"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Ofertas Especiales",
+      "short_name": "Ofertas",
+      "description": "Ver las mejores ofertas en medicamentos",
+      "url": "/#ofertas",
+      "icons": [
+        {
+          "src": "/productos/citrato_magnesio.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Sucursales",
+      "short_name": "Sucursales", 
+      "description": "Encontrar sucursales cercanas",
+      "url": "/#sucursales",
+      "icons": [
+        {
+          "src": "/Logo-Vivo-Mas-Icono.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Contacto WhatsApp",
+      "short_name": "WhatsApp",
+      "description": "Contactar por WhatsApp",
+      "url": "https://wa.me/56931201232?text=Hola,%20quiero%20más%20información%20de%20las%20ofertas%20y%20servicios%20de%20Vivo%20Más.",
+      "icons": [
+        {
+          "src": "/Logo-Vivo-Mas-Icono.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "dir": "ltr",
+  "iarc_rating_id": "e84b072d-71b3-4d3e-86ae-31a8ce4e53b7"
+}
