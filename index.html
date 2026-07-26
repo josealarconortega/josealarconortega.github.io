@@ -6,6 +6,9 @@
     <!-- Critical Performance Meta Tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <meta name="theme-color" content="#066f93" />
     <meta name="msapplication-TileColor" content="#066f93" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -495,21 +498,19 @@
         });
       });
       
-      // Performance optimization with tracking
+      // Limpieza automática de Service Worker y Caché para sitio estático
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
-          navigator.serviceWorker.register('/sw.js')
-            .then(function(registration) {
-              console.log('SW registered: ', registration);
-              window.trackConversion('pwa_ready', {
-                category: 'technical',
-                label: 'service_worker',
-                value: 1
-              });
-            })
-            .catch(function(registrationError) {
-              console.log('SW registration failed: ', registrationError);
+          navigator.serviceWorker.getRegistrations().then(function(registrations) {
+            for (let registration of registrations) {
+              registration.unregister();
+            }
+          });
+          if ('caches' in window) {
+            caches.keys().then(function(names) {
+              for (let name of names) caches.delete(name);
             });
+          }
         });
       }
 
@@ -523,8 +524,8 @@
         }
       });
     </script>
-    <script type="module" crossorigin src="/assets/index-BzT0S3yJ.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-TdkHexrE.css">
+    <script type="module" crossorigin src="/assets/index-DnwQzs_k.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CPZL1lWt.css">
   </head>
   <body>
     <div id="root"></div>
